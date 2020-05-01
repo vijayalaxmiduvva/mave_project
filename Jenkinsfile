@@ -12,6 +12,7 @@ pipeline {
                    cd /etc/ansible/
                    pwd
                    ansible node -m ping
+                   cd /etc/ansible/playbook/  
                    ansible-playbook deploy.yaml
                 '''
             }
