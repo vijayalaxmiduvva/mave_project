@@ -3,7 +3,7 @@ pipeline {
 
     stages {
         stage('Build') {
-            agent { label 'slave01' }
+            agent { label 'slave' }
             steps {
                 echo 'Building..'
                 sh '''
@@ -12,6 +12,7 @@ pipeline {
                    cd /etc/ansible/
                    pwd
                    ansible node -m ping
+                   ansible-playbook deploy.yaml
                 '''
             }
         }
