@@ -1,4 +1,4 @@
----#configuration setup
+--- #configuration setup
 - hosts: node
   remote_user: ubuntu
   connection: ssh
